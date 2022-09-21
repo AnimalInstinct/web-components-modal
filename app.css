@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    --color-primary: #000000;
+    --background-primary: #ffffff;
+    --color-secondary: #919191;
+    --color-danger: #ffffff;
+    --background-danger: #ca0000;
+    --color-info: #ffffff;
+    --background-info: #006faf;
+    
+    --modal-backdrop-background-color: rgba(0, 0, 0, 0.75);
+    --modal-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+}
