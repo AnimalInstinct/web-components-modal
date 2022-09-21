@@ -8,7 +8,18 @@ class Modal extends HTMLElement {
             </style>
             <button>Open modal</button>
             <div id="backdrop"></div>
-            <div id="modal"></div>
+            <div id="modal">
+                <header>
+                    <h1>Modal header</h1>
+                </header>
+                <section id="main">
+                    <slot></slot>
+                </section>
+                <section id='actions'>
+                    <button>Ok</button>
+                    <button>Cancel</button>
+                </section>
+            </div>
         `
     }
 }

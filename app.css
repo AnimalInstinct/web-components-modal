@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
@@ -13,4 +15,13 @@ html {
     
     --modal-backdrop-background-color: rgba(0, 0, 0, 0.75);
     --modal-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    --modal-text-color: rgb(83, 83, 83);
+}
+
+body {
+    margin: 0;
+}
+
+div {
+    display: block;
 }
