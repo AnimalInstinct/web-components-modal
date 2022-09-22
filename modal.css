@@ -1,5 +1,5 @@
 #backdrop {
-    /* display: none; */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -7,10 +7,12 @@
     height: 100vh;
     background-color: var(--modal-backdrop-background-color);
     z-index: 1;
+    opacity: 0;
+    pointer-events: none;
 }
 
 #modal {
-    /* display: none; */
+    display: none;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -25,8 +27,34 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#backfrop,
+#modal {
+    transition: opacity 1s;
 }
 
 #actions {
     padding: 1rem 0;
+}
+
+:host([opened]) #backdrop,
+:host([opened]) #modal {
+    display: flex;
+    opacity: 1;
+    pointer-events: all;
+}
+
+button {
+    border: none;
+    padding: 20px 40px;
+    font-size: 1.2em;
+    background-color: bisque;
+    color: var(--modal-text-color);
+}
+
+::slotted(h1) {
+    font-size: 1.7em;
 }

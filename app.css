@@ -20,8 +20,26 @@ html {
 
 body {
     margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 div {
     display: block;
+}
+
+button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    background-color: darksalmon;
+    color: darkred;
+    padding: 40px 60px;
+    font-size: 1.5em;
+    border: none;
 }

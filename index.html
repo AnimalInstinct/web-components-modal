@@ -11,9 +11,31 @@
 </head>
 
 <body>
+    <button>Click me</button>
     <components-modal>
-        <h2>Modal content will be here soon...</h2>
+        <h1 slot="title">You know what?</h1>
+        <span>The unexamined life is not worth living...</span>
     </components-modal>
 </body>
+
+<script>
+    const confirmButton = document.querySelector('button')
+    const modal = document.querySelector('components-modal')
+    console.log('HTML::Modal::isOpen::', modal.isOpen);
+
+    confirmButton.addEventListener('click', function () {
+        console.log('HTML::Button clicked');
+        modal.open()
+        console.log('HTML::Modal::isOpen::', modal.isOpen);
+    })
+
+    modal.addEventListener('confirmed', function () {
+        console.log('HTML::Modal::Confirmed event listener');
+    })
+
+    modal.addEventListener('rejected', function () {
+        console.log('HTML::Modal::Rejected event listener');
+    })
+</script>
 
 </html>
